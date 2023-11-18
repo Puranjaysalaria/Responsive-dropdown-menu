@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+
+}
+
+a:hover {
+    color: chocolate;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    widows: 100%;
+    height: 60px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.navbar .toggle_button {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.action_button {
+    color: #fff;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: scale 0.2 ease;
+}
+
+.action_button:hover {
+    scale: 1.02;
+    color: #fff;
+}
+
+.navbar ul li:hover {
+    scale: 1.06;
+}
+
+.action_button:active {
+    scale: 0.95;
+}
+
+.navbar ul li:active {
+    scale: 0.94;
+}
+
+/* dropbox */
+
+.dropbox {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropbox ul li:hover {
+    scale: 1.06;
+}
+
+.dropbox .action_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dropbox .open {
+    height: 240px;
+}
+
+
+.dropbox li {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+
+    .navbar .links,
+    .navbar .action_button {
+        display: none;
+    }
+
+    .navbar .toggle_button {
+        display: block;
+    }
+
+}
+
+@media (max-width:578px) {
+    .dropbox {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+main section#raja {
+    height: calc(100vh-60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 185px ;
+    gap: 5px;
+    line-height: 23px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
